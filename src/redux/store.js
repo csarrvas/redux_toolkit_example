@@ -2,6 +2,16 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import reducer from './reducers';
 
+// function loggerMiddleware(store) {
+//   return function(next) {
+//     return function(action) {
+//       console.log(action);
+//       return next(action);
+//     }
+//   } 
+// }
+// const middleware = [thunk, loggerMiddleware];
+
 const store = createStore(
   reducer,
   compose( applyMiddleware(thunk),
