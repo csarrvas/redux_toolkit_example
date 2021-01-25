@@ -21,7 +21,8 @@ export const getQuote = () => {
 
     } catch (error) {
       dispatch({
-        type: GET_QUOTE_FAILURE
+        type: GET_QUOTE_FAILURE,
+        payload: error
       });
     }
   };
