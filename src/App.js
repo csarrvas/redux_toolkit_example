@@ -6,8 +6,13 @@ import { ReactComponent as Logo } from './logo.svg';
 
 //Normal Redux
 import { useDispatch } from 'react-redux';
-import { getQuote } from './redux/actions/breakingBadQuoteActions';
-import { increaseCounter } from './redux/actions/quoteCountActions';
+// import { getQuote } from './redux/actions/breakingBadQuoteActions';
+// import { increaseCounter } from './redux/actions/quoteCountActions';
+
+//Reduxjs Toolkit
+// import { increaseCounter } from './reduxjs_toolkit/actions/quoteCountActions';
+import quoteCountSlice from './reduxjs_toolkit/feature/quoteCountSlice';
+import breakingBadQuoteSlice, { getQuote } from './reduxjs_toolkit/feature/breakingBadQuote';
 
 const Container = styled.div`
   display: flex;
@@ -40,12 +45,14 @@ const Button = styled.button`
 
 function App() {
   const dispatch = useDispatch();
+  const { increaseCounter } = quoteCountSlice.actions;
 
   useEffect( () => {
     dispatch(getQuote());
   }, [dispatch]);
 
   const handleClick = () => {
+    console.log(breakingBadQuoteSlice.actions);
     dispatch(increaseCounter());
     dispatch(getQuote());
   }

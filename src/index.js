@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 
 //Normal Redux
 import { Provider } from 'react-redux';
-import store from './redux/store';
+// import store from './redux/store';
+
+//Reduxjs Toolkit
+import store from './reduxjs_toolkit/store';
 
 import './index.css';
 import App from './App';
