@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
-import breakingBadQuoteSlice from '../feature/breakingBadQuote';
-// import breakingBadQuoteReducer from '../../redux/reducers/breakingBadQuoteReducer';
-// import quoteCountReducer from './quoteCountReducer';
-import quoteCountSlice from '../feature/quoteCountSlice';
+import breakingBadQuoteReducer from './breakingBadQuoteReducer';
+import quoteCountReducer from './quoteCountReducer';
+// import breakingBadQuoteSlice from '../feature/breakingBadQuote';
+// import quoteCountSlice from '../feature/quoteCountSlice';
 
 export default combineReducers({
-  // breakingBadQuote: breakingBadQuoteReducer,
-  breakingBadQuote: breakingBadQuoteSlice.reducer,
-  // quoteCount: quoteCountReducer,
-  quoteCount: quoteCountSlice.reducer,
+  breakingBadQuote: breakingBadQuoteReducer,
+  quoteCount: quoteCountReducer,
+  // breakingBadQuote: breakingBadQuoteSlice.reducer,
+  // quoteCount: quoteCountSlice.reducer,
 });

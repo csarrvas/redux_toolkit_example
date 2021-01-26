@@ -25,6 +25,7 @@ const breakingBadQuoteSlice = createSlice({
     }),
     [getQuote.fulfilled]: (state, action) => ({
       ...state,
+      loading: false,
       data: action.payload,
       error: '',
     }),
